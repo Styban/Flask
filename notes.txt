@@ -1,0 +1,30 @@
+SETUP
+    pip3 install virtualenv - allows you create a virtual environment (we install things on this project not globaly(in our computer system) so that when you share the project it is easier for others to setup because all of packages that are needed are contained in the project itself)
+    -- in short it makes it easier to work with other people
+
+    virtualenv env - create a virtual environment named env
+
+    env/Scripts/activate - to activate the environment (sometimes it is restricted to chat gpt on how to allow running scripts)
+
+    pip3 install flask flask-sqlalchemy
+
+Jinja:
+    Filters
+        upper
+        lower
+        capitalize
+        trim
+        title
+        safe
+        striptags
+
+        sample code:
+            py
+            @app.route('/user/<name>')
+            def user(name):
+                return render_template("index.html", user_name=name)
+
+            html
+            <h1>Hello {{user_name|filter}}</h1>
+
+Template Inheretance:
